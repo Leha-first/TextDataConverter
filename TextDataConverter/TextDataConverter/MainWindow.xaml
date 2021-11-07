@@ -1,0 +1,51 @@
+﻿<Window x:Class="TextDataConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextDataConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox
+                Grid.Row="1"
+                BorderThickness="1"
+                Header="Путь к исходному файлу"
+                BorderBrush="DarkGray">
+
+                <TextBlock
+                    x:Name="TextBlockWithFilePath"
+                    MinHeight="40"
+                    MinWidth="150"/>
+
+            </GroupBox>
+            
+            <Button
+                Grid.Row="2"
+                Content="Указать путь к файлу и запустить конвертирование"
+                Margin="20"
+                Click="ButtonBaseOnClick"/>
+
+            <Label
+                Grid.Row="3"
+                x:Name="LabelForResult"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
